@@ -27,8 +27,8 @@
 
 */
 
-window.addEventListener("load", findKeyWords);
-window.addEventListener("load", makeKeyStyles);
+window.addEventListener("load", findKeyWords());
+window.addEventListener("load", makeKeyStyles());
 
 function findKeyWords() {
   var keyword = document.createElement("aside")
@@ -39,6 +39,12 @@ function findKeyWords() {
 
   var keywordList = document.createElement("ol")
   keyword.appendChild("keywordList")
+
+  var keyWordElems = document.querySelectorAll("dfn")
+  const keyWords = new Array(keyWordElems.length);
+  for (var i = 0; i < keyWordElems.length; i++) {
+   keyWords[i] = keyWordElems[i].textContent;
+  }
 }
 
 
