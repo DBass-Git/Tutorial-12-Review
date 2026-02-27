@@ -38,12 +38,23 @@ function findKeyWords() {
   heading.textContent = "Keyword List"
 
   var keywordList = document.createElement("ol")
-  keyword.appendChild("keywordList")
+  keyword.appendChild(keywordList)
 
   var keyWordElems = document.querySelectorAll("dfn")
   const keyWords = new Array(keyWordElems.length);
   for (var i = 0; i < keyWordElems.length; i++) {
    keyWords[i] = keyWordElems[i].textContent;
+  }
+
+  var linkID = replaceWS(keyWords[i])
+  keyWordElems[i].id = "keyword_linkID";
+
+  keyWords.sort();
+
+  for (let i = 0; i < keyWords.length; i++) {
+   var keyWordListItem = document.createElement("li")
+   var keyWordLink = document.createElement("a")
+   keyWordLink.innerHTML = keyWords[i]
   }
 }
 
