@@ -55,6 +55,9 @@ function findKeyWords() {
    var keyWordListItem = document.createElement("li")
    var keyWordLink = document.createElement("a")
    keyWordLink.innerHTML = keyWords[i]
+   var linkID = replaceWS(keyWords[i])
+   keyWordLink.setAttribute("href", "#keyword_linkID")
+   
   }
 }
 
